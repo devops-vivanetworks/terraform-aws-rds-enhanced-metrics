@@ -35,7 +35,7 @@ resource "aws_lambda_function" "send_rds_enhanced_to_datadog" {
 
   environment {
     variables = {
-      kmsEncryptedKeys = var.kms_encrypted_keys
+      DD_API_KEY_SSM_NAME = var.datadog_api_key_parameter_store_name
     }
   }
 

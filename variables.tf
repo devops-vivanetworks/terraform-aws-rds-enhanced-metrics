@@ -23,9 +23,14 @@ variable "datadog_kms_key_arn" {
   description = "The ARN of KMS key used to encrypt/decrypt Datadog keys"
 }
 
-variable "kms_encrypted_keys" {
+variable "datadog_api_key_parameter_store_name" {
   type        = string
-  description = "The encrypted Datadog API key and Datadog application key. Go through README for details"
+  description = "The parameter store name that is used for our datadog api key"
+}
+
+variable "datadog_api_key_parameter_store_arn" {
+  type        = string
+  description = "The parameter store arn that is used for our datadog api key"
 }
 
 variable "retention_in_days" {
